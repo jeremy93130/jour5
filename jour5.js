@@ -55,21 +55,81 @@ console.log(pal)
 
 // Swap
 
+// function swap(string) {
+//   var sentence = ""
+
+//   for (var i = 0; i < string.length; i++) {
+//     if (string[i] !== string[i].toUpperCase()) {
+//       sentence +=string[i].toUpperCase()
+//     } else {
+//       sentence += string[i].toLowerCase()
+//     } 
+//   }
+
+//   console.log(sentence)
+// }
+
+// swap("MaDame ZouZou")
+
+
+// function swap(string) {
+//   var sentence = ""
+
+//   for (var i = 0; i < string.length; i++) {
+//     if (string[i] !== string[i].toUpperCase()) {
+//       sentence += string[i].toUpperCase()
+//     } else {
+//       sentence += string[i].toLowerCase()
+//     }
+//   } return sentence
+
+
+
+// }
+// var resultat = swap("MaDame ZouZou")
+// console.log(resultat)
+
+
+
 function swap(string) {
   var sentence = ""
 
   for (var i = 0; i < string.length; i++) {
-    if (string[i] !== string[i].toUpperCase()) {
-      sentence += string[i].toUpperCase()
-    } else {
+    if (string[i] === string[i].toUpperCase()) {
       sentence += string[i].toLowerCase()
+    } else {
+      sentence += string[i].toUpperCase()
     }
-  }
+  } return sentence
 
-  console.log(sentence)
+
+
+}
+var resultat = swap("MaDame ZouZou")
+console.log(resultat)
+
+
+
+// Bonus : 
+
+function makeItSpongeBob(string) {
+  var sentence = ""
+
+  for (var i = 0; i < string.length; i++) {
+    if (i % 2 === 0) {
+      sentence = sentence + string[i].toUpperCase()
+    } else if (i % 2 !== 0){
+      sentence = sentence + string[i].toLowerCase()
+    }
+  } return sentence
 }
 
-swap("MaDame ZouZou")
+var result = makeItSpongeBob("Javascript is easy")
+console.log(result)
+
+
+
+
 
 
 
