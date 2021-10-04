@@ -116,9 +116,9 @@ function makeItSpongeBob(string) {
   var sentence = ""
 
   for (var i = 0; i < string.length; i++) {
-    if (i % 2 === 0) {
+    if (i % 2 === 0 || string[i].toUpperCase() === " ") {
       sentence = sentence + string[i].toUpperCase()
-    } else if (i % 2 !== 0){
+    } else { 
       sentence = sentence + string[i].toLowerCase()
     }
   } return sentence
@@ -126,6 +126,51 @@ function makeItSpongeBob(string) {
 
 var result = makeItSpongeBob("Javascript is easy")
 console.log(result)
+
+// Bonus II :
+
+function sortLetters(string) {
+  var alphabetical = string.split("")
+  var alphabet = alphabetical.sort()
+  alphabet = alphabetical.slice(0, 1)
+  alphabet = alphabetical.join("")
+  return alphabet
+}
+var result = sortLetters("koNeXio")
+console.log(result)
+
+
+// Bonus III :
+
+function countEach(x) {
+
+  var countX = 0
+  var countO = 0
+  for (var i = 0; i < x.length; i++) {
+    if (x[i] === "x" || x[i].toUpperCase() === "X") {
+      countX++
+      console.log(countX)
+    } else if (x[i] === "o" || x[i].toUpperCase() === "O") {
+      countO++
+      console.log(countO)
+    } else {
+      return "Fatal Error ! "
+    }
+  }
+
+    if (countX === countO) {
+    return true
+  } else {
+    return false
+
+  }
+}
+
+var blabla = countEach("xoxoXOXOXxOo")
+console.log(blabla)
+
+
+
 
 
 
